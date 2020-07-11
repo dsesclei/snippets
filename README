@@ -65,6 +65,8 @@ shell_scripts/change_hplj_status:
     change READY message on old HP LaserJet printer displays
 shell_scripts/clean_mpchc_thumbnail_names:
     remove some of the junk in MPC-HC thumbnail image file names
+shell_scripts/convert_all_to_xz:
+    convert all .tar.* packages to .tar.xz and report saved space
 shell_scripts/count_total_files_in_directory:
     shows how many files are under each subdirectory of the current one
 shell_scripts/gather_file_dir_statistics:
