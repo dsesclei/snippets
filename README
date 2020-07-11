@@ -19,6 +19,19 @@ Happy hacking!
 
 ***** DESCRIPTION OF SOME SNIPPETS *****
 
+6502 CPU assembly code (in ACME Cross-Assembler format)
+-------------------------------------------------------
+6502/byte2bin: convert a byte to an 8-character string of binary digits
+6502/blockmove: move a block of memory (including sizes over >256 bytes)
+6502/detect6502: detect what variant of 6502/65816 CPU is in use
+6502/divide_16-8-8: divide 16-bit number by 8-bit number
+6502/divide_8-8-8: divide 8-bit number by 8-bit number
+6502/multiply_8-8-16: multiply two 8-bit numbers
+6502/pagefill: fill a 1-256 byte area of memory with a value
+6502/pagemove: move a block of memory (256 bytes or less)
+
+C functions (and header files to use them)
+------------------------------------------
 c/byteplane_xfrm: byte-plane transform from lzjody (see byteplane_xfrm.png)
 c/jody_cacheinfo: get cpu0 cache sizes from standard sysfs path on Linux
 c/jody_endian: endianness detection and conversion (untested)
@@ -32,6 +45,8 @@ c/strcat_fixed: a faster strcat() for when string length is already known
 c/string_malloc: a simple, fast memory allocator for small pieces  of data
 c/win_stat: Windows stat() and NT-to-UNIX epoch portability helper code
 
+Shell scripts (POSIX sh and/or GNU Bash)
+----------------------------------------
 shell_scripts/ansicolors.sh:
     ANSI color escape sequences for shell script echo
 shell_scripts/change_hplj_status.sh:
