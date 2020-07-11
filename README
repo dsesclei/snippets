@@ -32,6 +32,11 @@ Happy hacking!
 6502/pagefill: fill a 1-256 byte area of memory with a value
 6502/pagemove: move a block of memory (256 bytes or less)
 
+Batch files for Windows Command Prompt
+--------------------------------------
+batch_files/extract_audio_to_wav.bat:
+    use ffmpeg to pull the first audio track out of a video file (to WAV)
+
 C functions (and header files to use them)
 ------------------------------------------
 c/byteplane_xfrm: byte-plane transform from lzjody (see byteplane_xfrm.png)
@@ -53,6 +58,8 @@ shell_scripts/ansicolors.sh:
     ANSI color escape sequences for shell script echo
 shell_scripts/change_hplj_status.sh:
     change READY message on old HP LaserJet printer displays
+shell_scripts/clean_mpchc_thumbnail_names.sh:
+    remove some of the junk in MPC-HC thumbnail image file names
 shell_scripts/count_total_files_in_directory.sh:
     shows how many files are under each subdirectory of the current one
 shell_scripts/gather_file_dir_statistics.sh:
