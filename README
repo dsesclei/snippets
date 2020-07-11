@@ -1,0 +1,30 @@
+Helpful snippets by Jody Bruchon <jody@jodybruchon.com>
+
+https://github.com/jbruchon/snippets
+
+This is a bunch of helpful stuff that I wrote, often for other projects, all
+put together into one "project" for more convenient distribution and hopefully
+discovery by others who can use something here. I've tried to shove as much as
+I can under The MIT License for maximum reuse potential.
+
+Two (totally optional) requests:
+
+1. If you use something here, let me know: jody@jodybruchon.com is always open!
+
+2. If this is useful to you, consider tossing me a subscription or one-time
+   contribution at SubscribeStar:  https://subscribestar.com/JodyBruchon
+
+Happy hacking!
+
+
+***** DESCRIPTION OF EACH SNIPPET *****
+
+byteplane_xfrm.c/.h: byte-plane transform from lzjody (see byteplane_xfrm.png)
+jody_cacheinfo.c/.h: get cpu0 cache sizes from standard sysfs path on Linux
+jody_paths.c/.h: pathname processing functions used in jdupes for link names
+jody_sort.c/.h: numerically correct file name compare function (for sorting)
+jody_string.c/.h: str[n][case]cmp that returns only equality (faster)
+jody_strtoepoch.c/.h: convert datetime string to seconds since the epoch
+jody_win_unicode.c/.h: Windows Unicode helpers for aiding portability
+string_malloc.c/.h: a simple, fast memory allocator for small pieces  of data
+win_stat.c/.h: Windows stat() and NT-to-UNIX epoch portability helper code
