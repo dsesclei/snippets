@@ -38,6 +38,8 @@ Batch files for Windows Command Prompt
 --------------------------------------
 batch_files/extract_audio_to_wav:
     use ffmpeg to pull the first audio track out of a video file (to WAV)
+batch_files/companionlink_revival_kit:
+    script to watch-and-restart CompanionLink (or anything you edit it for)
 
 C functions (and header files to use them)
 ------------------------------------------

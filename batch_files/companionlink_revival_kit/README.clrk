@@ -1,0 +1,7 @@
+I used this to catch the program CompanionLink closing down silently and cause
+it to start back up. This directory includes a Windows Task Scheduler task that
+is used to invoke the check and restart. I don't remember why, but I had to use
+the included VBScript file to invoke the batch file from the task rather than
+calling the batch file directly.
+
+This can probably be used to watch-and-restart any program rather easily.
