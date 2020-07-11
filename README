@@ -17,17 +17,26 @@ Two (totally optional) requests:
 Happy hacking!
 
 
-***** DESCRIPTION OF EACH SNIPPET *****
+***** DESCRIPTION OF SOME SNIPPETS *****
 
-byteplane_xfrm.c/.h: byte-plane transform from lzjody (see byteplane_xfrm.png)
-jody_cacheinfo.c/.h: get cpu0 cache sizes from standard sysfs path on Linux
-jody_endian.c/.h: endianness detection and conversion (untested)
-jody_paths.c/.h: pathname processing functions used in jdupes for link names
-jody_sort.c/.h: numerically correct file name compare function (for sorting)
-jody_string.c/.h: str[n][case]cmp that returns only equality (faster)
-jody_strstr.c/.h: two-way strstr() that is relatively fast and quite small
-jody_strtoepoch.c/.h: convert datetime string to seconds since the epoch
-jody_win_unicode.c/.h: Windows Unicode helpers for aiding portability
-strcat_fixed.c/.h: a faster strcat() for when string length is already known
-string_malloc.c/.h: a simple, fast memory allocator for small pieces  of data
-win_stat.c/.h: Windows stat() and NT-to-UNIX epoch portability helper code
+c/byteplane_xfrm: byte-plane transform from lzjody (see byteplane_xfrm.png)
+c/jody_cacheinfo: get cpu0 cache sizes from standard sysfs path on Linux
+c/jody_endian: endianness detection and conversion (untested)
+c/jody_paths: pathname processing functions used in jdupes for link names
+c/jody_sort: numerically correct file name compare function (for sorting)
+c/jody_string: str[n][case]cmp that returns only equality (faster)
+c/jody_strstr: two-way strstr() that is relatively fast and quite small
+c/jody_strtoepoch: convert datetime string to seconds since the epoch
+c/jody_win_unicode: Windows Unicode helpers for aiding portability
+c/strcat_fixed: a faster strcat() for when string length is already known
+c/string_malloc: a simple, fast memory allocator for small pieces  of data
+c/win_stat: Windows stat() and NT-to-UNIX epoch portability helper code
+
+shell_scripts/ansicolors.sh:
+    ANSI color escape sequences for shell script echo
+shell_scripts/change_hplj_status.sh:
+    change READY message on old HP LaserJet printer displays
+shell_scripts/count_total_files_in_directory.sh:
+    shows how many files are under each subdirectory of the current one
+shell_scripts/gather_file_dir_statistics.sh:
+    shows various file/directory stats, including avg/min/max file size
