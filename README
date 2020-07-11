@@ -21,10 +21,13 @@ Happy hacking!
 
 byteplane_xfrm.c/.h: byte-plane transform from lzjody (see byteplane_xfrm.png)
 jody_cacheinfo.c/.h: get cpu0 cache sizes from standard sysfs path on Linux
+jody_endian.c/.h: endianness detection and conversion (untested)
 jody_paths.c/.h: pathname processing functions used in jdupes for link names
 jody_sort.c/.h: numerically correct file name compare function (for sorting)
 jody_string.c/.h: str[n][case]cmp that returns only equality (faster)
+jody_strstr.c/.h: two-way strstr() that is relatively fast and quite small
 jody_strtoepoch.c/.h: convert datetime string to seconds since the epoch
 jody_win_unicode.c/.h: Windows Unicode helpers for aiding portability
+strcat_fixed.c/.h: a faster strcat() for when string length is already known
 string_malloc.c/.h: a simple, fast memory allocator for small pieces  of data
 win_stat.c/.h: Windows stat() and NT-to-UNIX epoch portability helper code
