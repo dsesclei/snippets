@@ -32,6 +32,8 @@ Happy hacking!
 6502/pagefill: fill a 1-256 byte area of memory with a value
 6502/pagemove: move a block of memory (256 bytes or less)
 
+6502/nes: bootstrapping code for a basic Nintendo Entertainment System ROM
+
 Batch files for Windows Command Prompt
 --------------------------------------
 batch_files/extract_audio_to_wav.bat:
