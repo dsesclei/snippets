@@ -5,7 +5,9 @@ https://github.com/jbruchon/snippets
 This is a bunch of helpful stuff that I wrote, often for other projects, all
 put together into one "project" for more convenient distribution and hopefully
 discovery by others who can use something here. I've tried to shove as much as
-I can under The MIT License for maximum reuse potential.
+I can under The MIT License for maximum reuse potential. Anything without an
+explicit license declaration or reference at the top of the file should be
+assumed to be released under The MIT License (see the file LICENSE-MIT)
 
 Two (totally optional) requests:
 
