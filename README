@@ -73,3 +73,5 @@ shell_scripts/gather_file_dir_statistics:
     shows various file/directory stats, including avg/min/max file size
 shell_scripts/git_pull_all:
     in a directory of Git project directories, enter each and 'git pull'
+shell_scripts/remove_empty_dirs:
+    delete all empty directories underneath a specified directory
