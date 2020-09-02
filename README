@@ -75,3 +75,5 @@ shell_scripts/git_pull_all:
     in a directory of Git project directories, enter each and 'git pull'
 shell_scripts/remove_empty_dirs:
     delete all empty directories underneath a specified directory
+shell_scripts/refresh_directories:
+    attempt to defragment a directory while preserving date and permissions
