@@ -78,3 +78,5 @@ shell_scripts/refresh_directories:
     attempt to defragment a directory while preserving date and permissions
 shell_scripts/score_video_files:
     "score" how much space will be saved by transcoding video files
+shell_scripts/translate_scores_to_dir_scores:
+    make per-directory scores from a score_video_files "scores.txt" file
