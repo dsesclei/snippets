@@ -29,6 +29,8 @@ declare -i EXIST=0
 declare -i ADDED=0
 declare -i TOTAL=0
 
+declare -A SCK
+
 # Load scores file; skip any missing files
 unset SFN
 declare -i SCORES=0
@@ -36,28 +38,41 @@ test -e "$SF" && while read -r X
 	do
 	[ -z "$X" ] && continue
 	SFN[SCORES]="${X#* }"
-	[ ! -e "${SFN[$SCORES]}" ] && (( DROPPED++ )) && continue
+	if [ ! -e "${SFN[$SCORES]}" ]
+		then
+#		echo -e "\nDrop: '$X' = '${SFN[$SCORES]}'\n"
+		unset SFN[SCORES]
+		(( DROPPED++ ))
+		continue
+	fi
 	SSZ[SCORES]="${X%% *}"
+	# Use associative array as a fast lookup table
+	SCK[${SFN[$SCORES]}]=1
 	(( SCORES++ ))
-	[ $((SCORES % 20)) -eq 0 ] && echo -en "Loading scores file: $SCORES\r"
+	[ $((SCORES % 128)) -eq 0 ] && echo -en "Loading scores file: $SCORES\r"
 done < "$SF"
 
 while read -r FILE
 	do
 	test -z "$FILE" && continue
 	(( TOTAL++ ))
-	[ $((TOTAL % 10)) -eq 0 ] && echo -en "\rDropped $DROPPED, checked $TOTAL, added $ADDED, already had $EXIST"
+	[ $((TOTAL % 16)) -eq 0 ] && echo -en "\rDropped $DROPPED, checked $TOTAL, added $ADDED, already had $EXIST"
 	# Check to see if the file is already present, and skip if so
 	declare -i I=0
-	while [[ $I -lt $SCORES ]]
-		do
-		if [ "$FILE" = "${SFN[$I]}" ]
-			then
-			(( EXIST++ ))
-			continue 2
-		fi
-		(( I++ ))
-	done
+	if [ ! -z "${SCK[$FILE]}" ]
+		then (( EXIST++ ))
+		continue
+		else
+		while [[ $I -lt $SCORES ]]
+			do
+			if [ "$FILE" = "${SFN[$I]}" ]
+				then
+				(( EXIST++ ))
+				continue 2
+			fi
+			(( I++ ))
+		done
+	fi
 
 	# Calculate a multiplier based on the video resolution
 	FULLRES=$(ffprobe "$FILE" 2>&1 | grep Stream.*Video: | tr ' ,' '\n' | grep '[0-9][0-9][0-9]*x[0-9][0-9][0-9]*')
@@ -82,13 +97,18 @@ while read -r FILE
 	(( SCORES++ ))
 	SSZ[$SCORES]="$SCORE"
 	SFN[$SCORES]="$FILE"
+	SCK[${SFN[$SCORES]}]=1
 	(( ADDED++ ))
 done < <(find -mindepth 2 -maxdepth $MAXDEPTH -type f -size +1000 | grep -e 'webm$' -e 'mkv$' -e 'mp4$' | sort)
 echo -e "\rScanned $TOTAL, added $ADDED, already had $EXIST, dropped $DROPPED"
 
 # Build new score file
+[ $((ADDED + DROPPED)) = 0 ] && echo "Scores list is unchanged; not writing a new scores file" && exit
 declare -i I=0
 while [ $I -lt $SCORES ]
-	do echo "${SSZ[$I]} ${SFN[$I]}"
+	do
+	[ $(( I % 64 )) = 0 ] && echo -en "\rWriting: $I" >&2
+	echo "${SSZ[$I]} ${SFN[$I]}"
 	(( I++ ))
 done > "$SF"
+echo -e "\rWriting: $I...done!" >&2
