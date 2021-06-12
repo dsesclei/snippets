@@ -7,7 +7,7 @@
  * faster versions is that resource usage is very low, making it more
  * suitable for embedded, low-memory, or small-cache systems.
  *
- * Copyright (C) 2014-2020 by Jody Bruchon <jody@jodybruchon.com>
+ * Copyright (C) 2014-2021 by Jody Bruchon <jody@jodybruchon.com>
  * Released under The MIT License
  */
 

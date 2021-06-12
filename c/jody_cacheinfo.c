@@ -1,7 +1,7 @@
 /* Detect and report size of CPU caches
  *
- * Copyright (C) 2020 by Jody Bruchon <jody@jodybruchon.com>
- * Released under The MIT License
+ * Copyright (C) 2017-2021 by Jody Bruchon <jody@jodybruchon.com>
+ * Distributed under The MIT License
  *
  * If an error occurs or a cache is missing, zeroes are returned
  * Unified caches populate l1/l2/l3; split caches populate lXi/lXd instead

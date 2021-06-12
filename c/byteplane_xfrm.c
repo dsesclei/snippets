@@ -1,7 +1,7 @@
 /*
  * Byte plane transformation
  *
- * Copyright (C) 2014-2020 by Jody Bruchon <jody@jodybruchon.com>
+ * Copyright (C) 2014-2021 by Jody Bruchon <jody@jodybruchon.com>
  * Released under The MIT License
  *
  * This code performs an n-plane transformation on a block of data.

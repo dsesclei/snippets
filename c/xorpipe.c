@@ -1,7 +1,7 @@
 /* Runs XOR encryption over the input stream using a 32-bit key.
  * This program is designed to work as part of a pipeline only.
  *
- * Copyright (C) 2012-2020 by Jody Bruchon <jody@jodybruchon.com>
+ * Copyright (C) 2012-2021 by Jody Bruchon <jody@jodybruchon.com>
  * Licensed under The MIT License
  */
 

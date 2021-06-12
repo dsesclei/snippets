@@ -1,7 +1,7 @@
 /*
  * Jody Bruchon's two-way strstr() function
  *
- * Copyright (C) 2014-2020 by Jody Bruchon <jody@jodybruchon.com>
+ * Copyright (C) 2014-2021 by Jody Bruchon <jody@jodybruchon.com>
  * See jody_strstr.c for license information
  */
 

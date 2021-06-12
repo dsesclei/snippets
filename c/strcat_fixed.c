@@ -1,6 +1,6 @@
 /* Fast strcat() implementations for when string lengths are known
  *
- * Copyright (C) 2015-2020 by Jody Bruchon <jody@jodybruchon.com>
+ * Copyright (C) 2015-2021 by Jody Bruchon <jody@jodybruchon.com>
  * Released under The MIT License
  */
 

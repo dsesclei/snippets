@@ -2,7 +2,7 @@
  * Detect endianness at runtime and provide conversion functions
  * Version 1.0 (2015-11-08)
  *
- * Copyright (C) 2015-2020 by Jody Bruchon <jody@jodybruchon.com>
+ * Copyright (C) 2015-2021 by Jody Bruchon <jody@jodybruchon.com>
  * Released under The MIT License
  */
 

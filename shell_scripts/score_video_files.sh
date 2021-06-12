@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Copyright (C) 2021 by Jody Bruchon <jody@jodybruchon.com>
+# Released under The MIT License
+
 # Use ffprobe duration vs file size to "score" video file "weights"
 # Records the scores in a score file, skipping already-present entries
 #
