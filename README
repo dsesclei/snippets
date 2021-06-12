@@ -66,6 +66,8 @@ shell_scripts/clean_mpchc_thumbnail_names:
     remove some of the junk in MPC-HC thumbnail image file names
 shell_scripts/convert_all_to_xz:
     convert all .tar.* packages to .tar.xz and report saved space
+shell_scripts/colordiff:
+    colorize diff output, but without needing Perl like colordiff.org
 shell_scripts/count_total_files_in_directory:
     shows how many files are under each subdirectory of the current one
 shell_scripts/gather_file_dir_statistics:
