@@ -110,8 +110,10 @@ echo -e "\rScanned $TOTAL, added $ADDED, already had $EXIST, dropped $DROPPED"
 declare -i I=0
 while [ $I -lt $SCORES ]
 	do
-	[ $(( I % 64 )) = 0 ] && echo -en "\rWriting: $I" >&2
-	echo "${SSZ[$I]} ${SFN[$I]}"
+	[ $(( I % 128 )) = 0 ] && echo -en "\rWriting: $I" >&2
 	(( I++ ))
+	OUT="${SSZ[$I]} ${SFN[$I]}"
+	[[ -z "$OUT" || "$OUT" = " " ]] && continue
+	echo "$OUT"
 done > "$SF"
 echo -e "\rWriting: $I...done!" >&2
