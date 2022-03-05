@@ -34,6 +34,14 @@ General workflow to use these is:
   - Run "./general_youtube_archive_cleanup.sh"
   - Wait as it moves metadata and any transcodings you've put in "encoded/"
 
+Why can't you run "generate_archive_batch_file.sh" on a Linux system? Because
+the resulting BAT file will have the wrong line endings and won't work on
+Windows. I tried to modify it to work on the Linux side but the resulting
+files consistently failed to run properly and I got tired of it. If you feel a
+bit spirited and want to try to solve this problem with standard tools (not
+stuff like "tofrodos" which isn't a standard tool) then feel free, and submit
+a patch to GitHub with your fix!
+
 If you transcode entire directories in HandBrake to make the files smaller,
 placing the transcoded mp4 files in the channel's "encoded/" subdirectory will
 make the archive cleanup script delete the originals and move the processed
