@@ -5,11 +5,18 @@
 
 CUR=NONE; TOT=0; CNT=0
 sort -k2 scores.txt | cut -d/ -f1-2 | while read LINE
-	do SZ=$((${LINE// .*/} / 1024))
+	do
+	[ -z "$LINE" ] && continue
+	SZ=$((${LINE// .*/} / 1024))
 	D="${LINE/#* .\//}"
 	if [ "$CUR" != "$D" ]
 		then
-		test "$CNT" != "0"  && test "$CUR" != "NONE" && echo "$((TOT / CNT)) $CUR"
+		# Output the score
+		[[ "$CNT" != "0" && "$CUR" != "NONE" ]] && if [[ "$1" = "bulk" ]]
+			then echo "$((TOT / 64 * CNT)) $CUR"
+			else echo "$((TOT / CNT)) $CUR"
+		fi
+
 		CUR="$D"
 		TOT=0
 		CNT=0
@@ -18,4 +25,4 @@ sort -k2 scores.txt | cut -d/ -f1-2 | while read LINE
 		TOT=$((TOT + SZ))
 		CNT=$((CNT + 1))
 	fi
-done | sort -gr > dirscores.txt
+done

@@ -78,7 +78,15 @@ shell_scripts/remove_empty_dirs:
     delete all empty directories underneath a specified directory
 shell_scripts/refresh_directories:
     attempt to defragment a directory while preserving date and permissions
-shell_scripts/score_video_files:
+
+--- YouTube archive management scripts ---
+Read the README.txt in shell_scripts/youtube_archive/ for full explanations
+Not all scripts will be mentioned below!
+shell_scripts/youtube_archive/count_files_in_dirs:
+    show count of files in all subdirectories, excluding their subdirs
+shell_scripts/youtube_archive/find_video_files_without_audio:
+    scan entire archive for video files with missing audio tracks
+shell_scripts/youtube_archive/score_video_files:
     "score" how much space will be saved by transcoding video files
-shell_scripts/translate_scores_to_dir_scores:
+shell_scripts/youtube_archive/translate_scores_to_dir_scores:
     make per-directory scores from a score_video_files "scores.txt" file
